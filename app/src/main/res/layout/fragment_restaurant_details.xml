@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.RestaurantDetailsFragment">
+
+   <com.google.android.material.appbar.AppBarLayout
+       android:layout_width="match_parent"
+       android:id="@+id/restaurantFragmentAppbar"
+       android:fitsSystemWindows="true"
+       android:layout_height="280dp">
+
+       <com.google.android.material.appbar.CollapsingToolbarLayout
+           android:layout_width="match_parent"
+           android:fitsSystemWindows="true"
+           app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+           app:title="Travern Cafe"
+           android:id="@+id/restaurantFragmentCollapsingToolbar"
+           android:layout_height="match_parent">
+
+           <ImageView
+               android:layout_width="match_parent"
+               android:src="@drawable/restaurant_1"
+               app:layout_collapseMode="parallax"
+               android:layout_height="match_parent"/>
+
+           <androidx.appcompat.widget.Toolbar
+               android:layout_width="match_parent"
+               android:id="@+id/restaurantFragmentToolbar"
+               app:layout_collapseMode="pin"
+               android:layout_height="?attr/actionBarSize"/>
+
+       </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+   </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:layout_height="match_parent">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/restaurantFragmentRecyclerView"
+            tools:listitem="@layout/restaurant_details_frag_recycler_view_item"
+            android:layout_height="wrap_content" />
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

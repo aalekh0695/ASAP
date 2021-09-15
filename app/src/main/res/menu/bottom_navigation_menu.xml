@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/go_out_page"
+        android:enabled="true"
+        android:icon="@drawable/restaurant"
+        android:title="@string/go_out"/>
+
+    <item
+        android:id="@+id/pro_page"
+        android:enabled="true"
+        android:icon="@drawable/restaurant"
+        android:title="@string/pro"/>
+
+    <item
+        android:id="@+id/profile_page"
+        android:enabled="true"
+        android:icon="@drawable/user"
+        android:title="@string/profile"/>
+
+</menu>

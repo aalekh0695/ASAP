@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/dishImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <TextView
+                android:id="@+id/textviewDishName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Le Tavern Grill"
+                android:textSize="20sp"
+                android:layout_marginLeft="30dp"
+                app:layout_constraintStart_toEndOf="@+id/dishImage"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewDishDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="50% OFF USE CODE"
+                android:textSize="15sp"
+                android:textColor="@color/red"
+                app:layout_constraintStart_toEndOf="@+id/dishImage"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDishStarRating" />
+
+            <TextView
+                android:id="@+id/textViewDishPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="Fast Food Cafe"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@+id/dishImage"
+                app:layout_constraintTop_toBottomOf="@+id/textviewDishName" />
+
+            <TextView
+                android:id="@+id/textViewDishStarRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:textSize="15sp"
+                android:text="220 per person"
+                app:layout_constraintStart_toEndOf="@+id/dishImage"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDishPrice" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
